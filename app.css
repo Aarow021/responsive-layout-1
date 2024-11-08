@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.full {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #383e4c;
+}
+
+
+nav > a {
+    padding: 0.5em 1em;
+    margin: 1em;
+    color: white;
+    text-decoration: none;
+    border: solid 1px #575f6e;
+    transition: 300ms ease background-color;
+}
+
+nav > a:hover {
+    background-color: #49505f;
+}
+
+#hero {
+    height: 70vh;
+    background-image: url(images/img11.jpg);
+    background-repeat: none;
+    max-width: 100%;
+}
