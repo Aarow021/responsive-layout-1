@@ -115,18 +115,28 @@ header {
 }
 
 nav {
-    a {
-    padding: 0.5em 1em;
-    margin: 1em;
-    color: white;
-    text-decoration: none;
-    border: solid 1px #575f6e;
-    transition: 300ms ease background-color;
-    }
+    width: 100%;
 
-    a:hover {
-        background-color: #49505f;
+    ul.row {
+        list-style: none;
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+
+        a {
+            padding: 0.5em 1em;
+            margin: 1em;
+            color: white;
+            text-decoration: none;
+            border: solid 1px #575f6e;
+            transition: 300ms ease background-color;
+            }
+        
+            a:hover {
+                background-color: #49505f;
+            }
     }
+    
 }
 
 #hero {
@@ -350,5 +360,44 @@ footer {
             color: #a0a0a0;
         }
 
+        a {
+            background-image: url(images/img0.png);
+            width: 2em;
+            height: 2em;
+            background-repeat: none;
+            background-size: cover;
+            align-self: flex-end;
+            margin: 0 1rem 1rem 0;
+        }
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .cards.row {
+        flex-flow: column nowrap;
+    }
+
+    .cards article {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    nav {
+        ul.row {
+            flex-direction: column;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+            padding-inline-start: 0;
+            
+            li {
+                display:contents;
+                text-align: -webkit-match-parent;
+                unicode-bidi: isolate;
+            }
+        }
     }
 }
