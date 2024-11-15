@@ -136,7 +136,6 @@ nav {
                 background-color: #49505f;
             }
     }
-    
 }
 
 #hero {
@@ -399,5 +398,37 @@ footer {
                 unicode-bidi: isolate;
             }
         }
+    }
+
+    form > div.row {
+        flex-direction: column;
+
+        div.column:nth-child(1) {
+            width: 100%;
+            flex-flow: row wrap;
+
+            input:nth-child(1), input:nth-child(2) {
+                width: calc(96% / 2)
+            }
+
+            input:nth-child(3) {
+                flex-grow: 1;
+            }
+        }
+
+        textarea[placeholder] {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    }
+
+    button[type=submit] {
+        left: 0px;
+        align-self: center;
+        margin-top: 2rem;
+    }
+
+    #hero {
+        background-position: center;
     }
 }
