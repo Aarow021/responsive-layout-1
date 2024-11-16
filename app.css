@@ -122,19 +122,28 @@ nav {
         width: 100%;
         justify-content: center;
         padding: 0;
+    }
 
-        a {
-            padding: 0.5em 1em;
-            margin: 1em;
-            color: white;
-            text-decoration: none;
-            border: solid 1px #575f6e;
-            transition: 300ms ease background-color;
-            }
+    li, label {
+        padding: 0.5em 1em;
+        margin: 1em;
         
-            a:hover {
-                background-color: #49505f;
-            }
+        border: solid 1px #575f6e;
+        transition: 300ms ease background-color;
+        }
+    
+        li:hover, label:hover {
+            background-color: #49505f;
+        }
+    
+        a[href]:-webkit-any-link {
+            text-decoration: none;
+            color: white;
+        }
+
+    input, label {
+        display: none;
+        color: white;
     }
 }
 
@@ -383,7 +392,7 @@ footer {
         margin: 1rem 0;
     }
 
-    nav {
+    header > nav {
         ul.row {
             flex-direction: column;
             margin-block-start: 0;
@@ -393,10 +402,18 @@ footer {
             padding-inline-start: 0;
             
             li {
-                display:contents;
+                display: inline-block;
                 text-align: -webkit-match-parent;
                 unicode-bidi: isolate;
             }
+        }
+
+        label[for=menu] {
+            display: inline-block;
+        }
+
+        input[type='checkbox']:not(:checked) + ul.row {
+            display: none;
         }
     }
 
