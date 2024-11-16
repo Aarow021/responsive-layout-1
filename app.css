@@ -30,7 +30,7 @@ a {
 
 .full {
     width: 100%;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     
@@ -65,7 +65,6 @@ a {
     display: flex;
     padding-left: 1rem;
     padding-right: 1rem;
-    height: calc(fit-content + 3rem);
     
     article {
         background-color: #f2f2f2;
@@ -79,21 +78,21 @@ a {
         }
         
         h2 {
-            margin: 1rem 1rem 0 1rem;
-            color: #666666;
+            margin: 1rem 1rem 0;
+            color: #666;
         }
 
         p {
-            margin: 1rem 1rem 0 1rem;
+            margin: 1rem 1rem 0;
         }
 
         p:last-of-type {
-            margin: 1rem 1rem 2rem 1rem;
+            margin: 1rem 1rem 2rem;
         }
 
         a {
             font-size: 1.5rem;
-            margin: auto 0 1rem 0;
+            margin: auto 0 1rem;
             padding: 1rem 2rem;
             border: solid 1px #6f6f6f;
             border-radius: 1rem;
@@ -127,31 +126,32 @@ nav {
     li, label {
         padding: 0.5em 1em;
         margin: 1em;
-        
         border: solid 1px #575f6e;
         transition: 300ms ease background-color;
         }
+
+		input, label {
+        display: none;
+        color: white;
+    }
     
         li:hover, label:hover {
             background-color: #49505f;
         }
     
-        a[href]:-webkit-any-link {
+        a[href] {
             text-decoration: none;
             color: white;
         }
 
-    input, label {
-        display: none;
-        color: white;
-    }
+    
 }
 
 #hero {
     display: flex;
     height: 50vh;
-    background-image: url(images/img11.jpg);
-    background-repeat: none;
+    background-image: url("images/img11.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center -20vw;
@@ -161,6 +161,7 @@ nav {
     article {
         color: white;
         text-align: center;
+
         h1 {
             text-shadow: black 1px 1px;
             font-size: 2em;
@@ -222,7 +223,7 @@ main {
 
         article:nth-child(3) {
             h2 {
-                color: #666666;
+                color: #666;
             }
 
             a {
@@ -243,7 +244,7 @@ main {
     }
 
     section:nth-child(3) {
-        background-image: url(images/img13.jpg);
+        background-image: url("images/img13.jpg");
         padding: 4rem 2rem;
         color: white;
 
@@ -271,7 +272,7 @@ main {
 }
 
 aside {
-    background-image: url(images/img14.jpg);
+    background-image: url("images/img14.jpg");
     align-items: center;
     justify-content: center;
     padding: 3rem;
@@ -352,7 +353,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: #666666;
+        color: #666;
 
         h2, p:not(p:last-of-type) {
             font-style: italic;
@@ -360,8 +361,8 @@ footer {
 
         hr {
             width: 100%;
-            border-color: #eeeeee;
-            border-top: solid 1px #eeeeee
+            border-color: #eee;
+            border-top: solid 1px #eee
         }
         
         p:first-of-type {
@@ -369,10 +370,10 @@ footer {
         }
 
         a {
-            background-image: url(images/img0.png);
+            background-image: url("images/img0.png");
             width: 2em;
             height: 2em;
-            background-repeat: none;
+            background-repeat: no-repeat;
             background-size: cover;
             align-self: flex-end;
             margin: 0 1rem 1rem 0;
@@ -382,7 +383,6 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-
     .cards.row {
         flex-flow: column nowrap;
     }
@@ -395,10 +395,8 @@ footer {
     header > nav {
         ul.row {
             flex-direction: column;
-            margin-block-start: 0;
-            margin-block-end: 0;
-            margin-inline-start: 0;
-            margin-inline-end: 0;
+            margin-block: 0;
+            margin-inline: 0;
             padding-inline-start: 0;
             
             li {
@@ -408,7 +406,7 @@ footer {
             }
         }
 
-        label[for=menu] {
+        label[for="menu"] {
             display: inline-block;
         }
 
@@ -439,8 +437,8 @@ footer {
         }
     }
 
-    button[type=submit] {
-        left: 0px;
+    button[type="submit"] {
+        left: 0;
         align-self: center;
         margin-top: 2rem;
     }
